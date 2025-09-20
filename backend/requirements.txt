@@ -1,0 +1,6 @@
+tensorflow
+numpy
+flask
+flask_cors
+google-generativeai
+dotenv
