@@ -18,7 +18,7 @@ export function ImgForm() {
     fd.append("file", file);
 
     axios
-      .post(`${process.env.SERVER_URL}/predict`, fd, {
+      .post(`${import.meta.env.VITE_SERVER_URL}/predict`, fd, {
         onUploadProgress: (progressEvent) =>
           console.log(progressEvent.progress * 100),
       })

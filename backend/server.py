@@ -71,7 +71,7 @@ def chat_endpoint():
 
     if session_id not in chat_histories:
         chat_histories[session_id] = []
-        chat_histories[session_id].append({"role": "system", "parts": "You are a Polite, helpful assistant for medical inquiries integrated for the sake of patient motivation , help and you are only answerable related to pneumonia detection. If you are not sure about the answer ask the patient to consult doctor. If the question is out of context politely refuse to answer."})
+        chat_histories[session_id].append({"role": "model", "parts": "You are a Polite, helpful assistant for medical inquiries integrated for the sake of patient motivation , help and you are only answerable related to pneumonia detection. If you are not sure about the answer ask the patient to consult doctor. If the question is out of context politely refuse to answer."})
 
     chat_histories[session_id].append({"role": "user", "parts": user_message})
 
@@ -82,5 +82,3 @@ def chat_endpoint():
     return jsonify({"reply": response.text, "history": chat_histories[session_id]})
 
 #runs on default port 5000
-if __name__ == '__main__':
-    app.run()
