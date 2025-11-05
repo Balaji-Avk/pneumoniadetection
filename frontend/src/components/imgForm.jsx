@@ -16,6 +16,12 @@ export function ImgForm() {
       return;
     }
 
+    const maxSizeInBytes = 1024 * 1024;
+    if (file.size > maxSizeInBytes) {
+      alert("File size exceeds 1MB limit. Please select a smaller file.");
+      return;
+    }
+
     const fd = new FormData();
     fd.append("file", file);
     setIsUploading(true);
@@ -39,9 +45,25 @@ export function ImgForm() {
   };
 
   const handleFileChange = (e) => {
-    setFile(e.target.files[0]);
-    setFilename(e.target.files[0].name);
-    setImageUrl(URL.createObjectURL(e.target.files[0]));
+    const selectedFile = e.target.files[0];
+    
+    if (!selectedFile) return;
+
+    // Check file size (1MB = 1024 * 1024 bytes)
+    const maxSizeInBytes = 1024 * 1024; // 1MB
+    if (selectedFile.size > maxSizeInBytes) {
+      alert("File size exceeds 1MB limit. Please select a smaller file.");
+      // Reset the input
+      e.target.value = '';
+      setFile(null);
+      setFilename("");
+      setImageUrl("");
+      return;
+    }
+
+    setFile(selectedFile);
+    setFilename(selectedFile.name);
+    setImageUrl(URL.createObjectURL(selectedFile));
   };
 
   return (
