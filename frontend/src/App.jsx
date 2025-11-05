@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./screens/Home";
 import { ResultPage } from "./screens/ResultPage";
+import ChatOverlay from "./components/ChatOverlay";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
           <Route path="/predict" element={<ResultPage />} />
         </Routes>
       </BrowserRouter>
+      <ChatOverlay />
     </>
   );
 }

@@ -146,20 +146,27 @@
 .true {
   display: flex;
   padding: 50px 60px;
+  background-color: #fff;
+  border: 2px solid #1a1a1a;
+  border-radius: 12px;
+  margin: 20px;
   h1 {
-    color: orangered;
+    color: #1a1a1a;
     font-size: xxx-large;
+    font-weight: 600;
   }
   p {
     font-size: 25px;
     padding-top: 20px;
     inline-size: 88%;
     line-height: 30px;
+    color: #1a1a1a;
   }
   img {
     height: 500px;
     width: 500px;
     padding-left: 50px;
+    border-radius: 8px;
   }
   .msg-t {
     padding-top: 65px;
@@ -169,27 +176,34 @@
 .false {
   display: flex;
   padding: 50px 60px;
-  color: green;
+  background-color: #fff;
+  border: 2px solid #1a1a1a;
+  border-radius: 12px;
+  margin: 20px;
   img {
     height: 500px;
     width: 500px;
     padding-right: 50px;
+    border-radius: 8px;
   }
   .msg-f {
     padding-top: 95px;
   }
   h1 {
-    color: green;
+    color: #1a1a1a;
     font-size: 35px;
+    font-weight: 600;
   }
   ul {
     line-height: 30px;
     font-size: larger;
-    font-weight: bolder;
+    font-weight: 600;
+    color: #1a1a1a;
   }
   p {
     font-size: larger;
-    font-weight: bolder;
+    font-weight: 500;
+    color: #1a1a1a;
   }
 }
 
@@ -327,14 +341,14 @@
 }
 
 .home-button {
-  background: #f8fafc;
-  color: #475569;
-  border: 2px solid #e2e8f0;
+  background: #fff;
+  color: #1a1a1a;
+  border: 2px solid #1a1a1a;
 }
 
 .home-button:hover {
-  background: #e2e8f0;
+  background: #1a1a1a;
   transform: translateY(-1px);
   text-decoration: none;
-  color: #334155;
+  color: #fff;
 }

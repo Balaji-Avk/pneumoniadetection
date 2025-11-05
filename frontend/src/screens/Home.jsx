@@ -1,7 +1,6 @@
 import { ImgForm } from "../components/imgForm";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import ChatOverlay from "../components/ChatOverlay";
 import { v4 as uuidv4 } from "uuid";
 import { useEffect } from "react";
 
@@ -20,7 +19,6 @@ export function Home() {
       <Navbar />
       <Hero />
       <ImgForm />
-      <ChatOverlay />
     </div>
   );
 }

@@ -49,11 +49,9 @@ export function ImgForm() {
     
     if (!selectedFile) return;
 
-    // Check file size (1MB = 1024 * 1024 bytes)
     const maxSizeInBytes = 1024 * 1024; // 1MB
     if (selectedFile.size > maxSizeInBytes) {
       alert("File size exceeds 1MB limit. Please select a smaller file.");
-      // Reset the input
       e.target.value = '';
       setFile(null);
       setFilename("");
