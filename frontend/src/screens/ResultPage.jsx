@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom"
+import Navbar  from "../components/Navbar";
 
 export function ResultPage() {
   const resultVal = localStorage.getItem("resultVal");
@@ -55,6 +56,8 @@ export function ResultPage() {
   }
 
   return <div>
+      <Navbar />
+
       {message}
       <div className="result-actions">
         <Link to="/" className="home-button">
